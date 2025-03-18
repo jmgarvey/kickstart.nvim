@@ -4,22 +4,41 @@
 -- See the kickstart.nvim README for more information
 
 return {
-  'kdheepak/lazygit.nvim',
-  lazy = true,
-  cmd = {
-    'LazyGit',
-    'LazyGitConfig',
-    'LazyGitCurrentFile',
-    'LazyGitFilter',
-    'LazyGitFilterCurrentFile',
+  {
+    'kdheepak/lazygit.nvim',
+    lazy = true,
+    cmd = {
+      'LazyGit',
+      'LazyGitConfig',
+      'LazyGitCurrentFile',
+      'LazyGitFilter',
+      'LazyGitFilterCurrentFile',
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+    },
   },
-  -- optional for floating window border decoration
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  },
-  -- setting the keybinding for LazyGit with 'keys' is recommended in
-  -- order to load the plugin when the command is run for the first time
-  keys = {
-    { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
+  {
+    'linux-cultist/venv-selector.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+      'mfussenegger/nvim-dap-python', --optional
+      { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    },
+    lazy = false,
+    branch = 'regexp', -- This is the regexp branch, use this for the new version
+    config = function()
+      require('venv-selector').setup()
+    end,
+    keys = {
+      { ',v', '<cmd>VenvSelect<cr>' },
+    },
   },
 }
