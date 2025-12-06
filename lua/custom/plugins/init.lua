@@ -32,10 +32,10 @@ return {
       'mfussenegger/nvim-dap-python', --optional
       { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
     },
+    ft = 'python',
     opts = {
-      name = 'venv',
-      auto_refresh = false,
-      lazy = false,
+      search = {},
+      options = {},
     },
     --config = function()
     --  require('venv-selector').setup()
