@@ -896,7 +896,7 @@ require('lazy').setup({
     --'scottmckendry/cyberdream.nvim',
     --lazy = false,
     --priority = 1000,
-    'folke/tokyonight.nvim',
+    'catppuccin/nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
@@ -904,11 +904,11 @@ require('lazy').setup({
       --  variant = 'default',
       --  terminal_colors = true,
       --}
-      require('tokyonight').setup {
-        style = 'night',
-        transparent = true,
+      require('catppuccin').setup {
+        flavour = 'mocha',
+        transparent_background = true,
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          comments = {}, -- Disable italics in comments
         },
       }
 
@@ -916,7 +916,7 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'cyberdream'
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 
