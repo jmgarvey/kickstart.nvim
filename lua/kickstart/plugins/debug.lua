@@ -1,7 +1,5 @@
 -- Docs at https://github.com/mfussenegger/nvim-dap-python are useful.
 return {
-  -- keep-sorted start block=yes
-
   {
     'mfussenegger/nvim-dap',
     lazy = true,
@@ -89,8 +87,7 @@ return {
         config = function()
           -- debugpy is installed in my standard Python virtualenv so that it's
           -- available with all the other modules.
-          require('dap-python').setup '~/.pyenv/shims/python'
-          -- require('dap-python').setup '~/.pyenv/versions/medra/bin/python'
+          require('dap-python').setup 'python'
         end,
         -- Consider the mappings at
         -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
