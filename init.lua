@@ -939,7 +939,7 @@ require('lazy').setup({
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   { -- Collection of various small independent plugins/modules
-    'echasnovski/mini.nvim',
+    'nvim-mini/mini.nvim',
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -995,6 +995,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.lazygit',
   require 'kickstart.plugins.venv',
+  require 'kickstart.plugins.snacks',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
