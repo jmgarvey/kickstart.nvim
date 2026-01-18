@@ -89,6 +89,14 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
+      vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'LSP: [G]oto [D]efinition' })
+      vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'LSP: [G]oto [R]eferences' })
+      vim.keymap.set('n', 'gI', builtin.lsp_implementations, { desc = 'LSP: [G]oto [I]mplementation' })
+      vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'LSP: Type [D]efinition' })
+      vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, { desc = 'LSP: [D]ocument [S]ymbols' })
+      vim.keymap.set('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols, { desc = 'LSP: [W]orkspace [S]ymbols' })
+      vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, { desc = 'LSP: [G]oto [D]eclaration' })
+
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
