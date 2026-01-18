@@ -163,6 +163,7 @@ return {
         'javascript',
         'typescript',
         'tsx',
+        'regex',
       },
       auto_install = true,
 
