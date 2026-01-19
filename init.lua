@@ -783,7 +783,6 @@ require('lazy').setup({
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.ai',
   -- require 'kickstart.plugins.harpoon',
-  require 'kickstart.plugins.lazygit',
   require 'kickstart.plugins.venv',
   require 'kickstart.plugins.snacks',
   require 'kickstart.plugins.mini',

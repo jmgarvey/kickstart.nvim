@@ -21,6 +21,7 @@ return {
       },
       notifier = {},
       image = {},
+      lazygit = {},
       picker = {
         layout = { preset = 'v1' },
         layouts = {
@@ -216,6 +217,13 @@ return {
           Snacks.picker.marks()
         end,
         desc = '[S]earch [M]arks',
+      },
+      {
+        '<leader>lg',
+        function()
+          Snacks.lazygit()
+        end,
+        desc = '[L]azy[G]it',
       },
     },
   },
