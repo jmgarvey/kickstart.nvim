@@ -21,8 +21,11 @@ return {
       },
       notifier = {},
       image = {},
+      bigfile = {},
       lazygit = {},
       gitbrowse = {},
+      git = {},
+      gh = {},
       picker = {
         layout = { preset = 'v1' },
         layouts = {
@@ -228,12 +231,47 @@ return {
         desc = '[L]azy[G]it',
       },
       {
-        '<leader>gb',
+        '<leader>go',
         function()
           Snacks.gitbrowse()
         end,
-        desc = '[G]it [B]rowse',
+        desc = '[G]it [O]pen in Browser',
         mode = { 'n', 'v' },
+      },
+      {
+        '<leader>gb',
+        function()
+          Snacks.git.blame_line()
+        end,
+        desc = '[G]it [B]lame',
+      },
+      {
+        '<leader>gi',
+        function()
+          Snacks.picker.gh_issue()
+        end,
+        desc = '[G]itHub [I]ssues (open)',
+      },
+      {
+        '<leader>gI',
+        function()
+          Snacks.picker.gh_issue { state = 'all' }
+        end,
+        desc = '[G]itHub [I]ssues (all)',
+      },
+      {
+        '<leader>gp',
+        function()
+          Snacks.picker.gh_pr()
+        end,
+        desc = '[G]itHub [P]ull Requests (open)',
+      },
+      {
+        '<leader>gP',
+        function()
+          Snacks.picker.gh_pr { state = 'all' }
+        end,
+        desc = '[G]itHub [P]ull Requests (all)',
       },
     },
   },
