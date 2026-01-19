@@ -137,7 +137,7 @@ return {
         function()
           Snacks.picker.grep_word()
         end,
-        desc = '[S]earch visual selection or current [W]ord',
+        desc = '[S]earch current [W]ord or visual selection',
         mode = { 'n', 'x' },
       },
       {
@@ -166,12 +166,12 @@ return {
         function()
           Snacks.picker.recent()
         end,
-        desc = '[S]earch Recent Files[.]',
+        desc = '[S]earch [.] Recent Files',
       },
       {
         '<leader><leader>',
         function()
-          Snacks.picker.buffers()
+          Snacks.picker.buffers { current = false, sort_lastused = true }
         end,
         desc = '[ ] Find existing buffers',
       },
@@ -195,6 +195,27 @@ return {
           Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
         end,
         desc = '[S]earch [N]eovim Config Files',
+      },
+      {
+        '<leader>sp',
+        function()
+          Snacks.picker()
+        end,
+        desc = '[S]earch [P]ickers',
+      },
+      {
+        '<leader>s"',
+        function()
+          Snacks.picker.registers()
+        end,
+        desc = '[S]earch ["] Registers',
+      },
+      {
+        '<leader>sm',
+        function()
+          Snacks.picker.marks()
+        end,
+        desc = '[S]earch [M]arks',
       },
     },
   },
