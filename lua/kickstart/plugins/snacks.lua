@@ -22,6 +22,7 @@ return {
       notifier = {},
       image = {},
       lazygit = {},
+      gitbrowse = {},
       picker = {
         layout = { preset = 'v1' },
         layouts = {
@@ -218,12 +219,21 @@ return {
         end,
         desc = '[S]earch [M]arks',
       },
+
       {
         '<leader>lg',
         function()
           Snacks.lazygit()
         end,
         desc = '[L]azy[G]it',
+      },
+      {
+        '<leader>gb',
+        function()
+          Snacks.gitbrowse()
+        end,
+        desc = '[G]it [B]rowse',
+        mode = { 'n', 'v' },
       },
     },
   },

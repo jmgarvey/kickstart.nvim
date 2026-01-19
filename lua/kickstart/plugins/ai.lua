@@ -20,25 +20,25 @@ return {
       -- Recommended/example keymaps.
       vim.keymap.set({ 'n', 'x' }, '<leader>oa', function()
         require('opencode').ask('@this: ', { submit = true })
-      end, { desc = 'Ask about this' })
+      end, { desc = '[O]pencode [A]sk about this' })
       vim.keymap.set({ 'n', 'x' }, '<leader>os', function()
         require('opencode').select()
-      end, { desc = 'Select prompt' })
+      end, { desc = '[O]pencode [S]elect prompt' })
       vim.keymap.set({ 'n', 'x' }, '<leader>o+', function()
         require('opencode').prompt '@this'
-      end, { desc = 'Add this' })
+      end, { desc = '[O]pencoe [+] this' })
       vim.keymap.set('n', '<leader>ot', function()
         require('opencode').toggle()
-      end, { desc = 'Toggle embedded' })
+      end, { desc = '[O]pencode [T]oggle window' })
       vim.keymap.set({ 'n', 't' }, '<C-.>', function()
         require('opencode').toggle()
       end, { desc = 'Toggle opencode' })
       vim.keymap.set('n', '<leader>on', function()
         require('opencode').command 'session_new'
-      end, { desc = 'New session' })
+      end, { desc = '[O]pencode [N]ew session' })
       vim.keymap.set('n', '<leader>oi', function()
         require('opencode').command 'session_interrupt'
-      end, { desc = 'Interrupt session' })
+      end, { desc = '[O]pencode [I]nterrupt session' })
       vim.keymap.set('n', '<S-C-u>', function()
         require('opencode').command 'messages_half_page_up'
       end, { desc = 'Messages half page up' })
