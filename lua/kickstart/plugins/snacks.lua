@@ -224,11 +224,11 @@ return {
       },
 
       {
-        '<leader>lg',
+        '<leader>gl',
         function()
           Snacks.lazygit()
         end,
-        desc = '[L]azy[G]it',
+        desc = '[G]it [L]azygit',
       },
       {
         '<leader>go',
