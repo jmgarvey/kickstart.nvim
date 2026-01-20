@@ -276,6 +276,10 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    config = function(_, opts)
+      require('gitsigns').setup(opts)
+      vim.keymap.set('n', '<leader>tb', require('gitsigns').toggle_current_line_blame, { desc = '[T]oggle Git Show [B]lame Line' })
+    end,
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
@@ -344,7 +348,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>h', group = '[H]arpoon', mode = { 'n', 'v' } },
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
         { '<leader>o', group = '[O]pencode', mode = { 'n', 'v' } },
       },
@@ -783,7 +787,7 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.ai',
-  -- require 'kickstart.plugins.harpoon',
+  require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.venv',
   require 'kickstart.plugins.snacks',
   require 'kickstart.plugins.mini',
