@@ -24,9 +24,9 @@ return {
       vim.keymap.set({ 'n', 'x' }, '<leader>os', function()
         require('opencode').select()
       end, { desc = '[O]pencode [S]elect prompt' })
-      vim.keymap.set({ 'n', 'x' }, '<leader>o+', function()
+      vim.keymap.set({ 'n', 'x' }, '<leader>oa', function()
         require('opencode').prompt '@this'
-      end, { desc = '[O]pencoe [+] this' })
+      end, { desc = '[O]pencode [A]dd this' })
       vim.keymap.set('n', '<leader>ot', function()
         require('opencode').toggle()
       end, { desc = '[O]pencode [T]oggle window' })
