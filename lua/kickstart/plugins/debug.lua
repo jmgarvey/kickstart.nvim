@@ -42,17 +42,6 @@ return {
       vim.fn.sign_define('DapBreakpoint', { text = '🟥', texthl = '', linehl = '', numhl = '' })
       vim.fn.sign_define('DapStopped', { text = '▶️', texthl = '', linehl = '', numhl = '' })
     end,
-    dependencies = {
-      {
-        'igorlfs/nvim-dap-view',
-        -- Alternative UI.  https://igorlfs.github.io/nvim-dap-view/keymaps
-        -- Load with :DapViewOpen
-        -- Use g? in windows to see keymaps.
-        ---@module 'dap-view'
-        ---@type dapview.Config
-        opts = {},
-      },
-    },
   },
   {
     'rcarriga/nvim-dap-ui',
