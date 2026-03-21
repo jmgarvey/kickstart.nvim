@@ -351,6 +351,7 @@ require('lazy').setup({
         { '<leader>h', group = '[H]arpoon', mode = { 'n', 'v' } },
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
         { '<leader>o', group = '[O]pencode', mode = { 'n', 'v' } },
+        { '<leader>i', group = '[I]ncremental Selection' },
       },
     },
   },
