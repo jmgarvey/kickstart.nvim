@@ -32,6 +32,10 @@ return {
     keymaps = {
       show_help = '<f1>',
     },
+    integrations = {
+      grep_in_directory = 'snacks.picker',
+      grep_in_selected_files = 'snacks.picker',
+    },
   },
   -- 👇 if you use `open_for_directories=true`, this is recommended
   init = function()
