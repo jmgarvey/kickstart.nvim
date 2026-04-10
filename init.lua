@@ -352,6 +352,7 @@ require('lazy').setup({
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
         { '<leader>o', group = '[O]pencode', mode = { 'n', 'v' } },
         { '<leader>i', group = '[I]ncremental Selection' },
+        { '<leader>y', group = '[Y]azi' },
       },
     },
   },
@@ -389,7 +390,6 @@ require('lazy').setup({
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
-
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -773,6 +773,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.yazi',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.ai',
   require 'kickstart.plugins.harpoon',
