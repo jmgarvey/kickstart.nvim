@@ -27,6 +27,18 @@ return {
         desc = '[S]earch current [W]ord (grug)',
       },
       {
+        '<leader>sc',
+        function()
+          require('grug-far').open {
+            transient = true,
+            instanceName = 'replace',
+            staticTitle = 'Grug Find and Replace',
+            prefills = { paths = vim.fn.expand '%' },
+          }
+        end,
+        desc = '[S]earch [C]urrent file (grug)',
+      },
+      {
         '<leader>sv',
         function()
           require('grug-far').open {
