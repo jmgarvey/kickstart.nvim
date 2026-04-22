@@ -226,7 +226,15 @@ return {
       {
         '<leader>gl',
         function()
-          Snacks.lazygit()
+          local old = vim.env.CONFIG_DIR
+          vim.env.CONFIG_DIR = vim.fn.expand '~/.config/lazygit'
+
+          local ok, err = pcall(Snacks.lazygit)
+
+          vim.env.CONFIG_DIR = old
+          if not ok then
+            error(err)
+          end
         end,
         desc = '[G]it [L]azygit',
       },
