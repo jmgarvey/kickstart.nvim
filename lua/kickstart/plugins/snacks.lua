@@ -254,6 +254,13 @@ return {
         desc = '[G]it [B]lame',
       },
       {
+        '<leader>gs',
+        function()
+          Snacks.picker.git_branches()
+        end,
+        desc = '[G]it [S]witch Branch',
+      },
+      {
         '<leader>gi',
         function()
           Snacks.picker.gh_issue()
