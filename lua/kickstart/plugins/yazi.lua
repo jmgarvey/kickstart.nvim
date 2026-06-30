@@ -8,6 +8,12 @@ return {
   },
   keys = {
     {
+      '\\',
+      '<cmd>Yazi<cr>',
+      desc = 'Open yazi at the current file',
+    },
+    -- Disable this if neo-tree is enabled, since both use the same `\\` key.
+    {
       '<leader>yc',
       mode = { 'n', 'v' },
       '<cmd>Yazi<cr>',
