@@ -1,10 +1,7 @@
--- Docs at https://github.com/mfussenegger/nvim-dap-python are useful.
 return {
   {
     'mfussenegger/nvim-dap',
     lazy = true,
-    -- Copied from LazyVim/lua/lazyvim/plugins/extras/dap/core.lua and
-    -- modified.
     keys = {
       {
         '<leader>db',
@@ -61,12 +58,9 @@ return {
         'jay-babu/mason-nvim-dap.nvim',
         ---@type MasonNvimDapSettings
         opts = {
-          -- This line is essential to making automatic installation work
-          -- :exploding-brain
           handlers = {},
           automatic_installation = false,
-          -- DAP servers: these will be installed by mason-tool-installer.nvim
-          -- for consistency.
+          -- No adapters are installed automatically.
           ensure_installed = {},
         },
         dependencies = {
@@ -74,17 +68,14 @@ return {
           'mason-org/mason.nvim',
         },
       },
+      -- Retained for future Python debugging; currently disabled.
       {
         'mfussenegger/nvim-dap-python',
         enabled = false,
         lazy = true,
         config = function()
-          -- debugpy is installed in my standard Python virtualenv so that it's
-          -- available with all the other modules.
           require('dap-python').setup 'python'
         end,
-        -- Consider the mappings at
-        -- https://github.com/mfussenegger/nvim-dap-python?tab=readme-ov-file#mappings
         dependencies = {
           'mfussenegger/nvim-dap',
         },
@@ -102,5 +93,4 @@ return {
       -- keep-sorted end
     },
   },
-  -- keep-sorted end
 }

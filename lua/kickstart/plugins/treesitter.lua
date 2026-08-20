@@ -8,20 +8,19 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
-    branch = 'master', -- this plugin uses 'master' branch no port to main branch yet
+    branch = 'master',
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {
-      enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-      multiwindow = false, -- Disable multiwindow support for better performance
-      max_lines = 4, -- Show up to 4 lines of context (optimal balance)
-      min_window_height = 15, -- Only show context when window is at least 15 lines tall
-      line_numbers = true, -- Show line numbers in context (helpful for navigation)
-      multiline_threshold = 20, -- Show context for scopes with 20+ lines (more selective)
-      trim_scope = 'outer', -- Discard outer context lines when max_lines exceeded
-      mode = 'topline', -- Calculate context from top visible line (better for search)
-      -- Visual separator makes context boundary clear
-      separator = '─', -- Unicode horizontal line separator
-      zindex = 20, -- Keep context above other floating windows
+      enable = true,
+      multiwindow = false,
+      max_lines = 4,
+      min_window_height = 15,
+      line_numbers = true,
+      multiline_threshold = 20,
+      trim_scope = 'outer',
+      mode = 'topline',
+      separator = '─',
+      zindex = 20,
       on_attach = function(buf)
         -- Disable in very large files for performance
         local max_filesize = 200 * 1024 -- 200 KB

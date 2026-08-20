@@ -4,7 +4,7 @@ return {
     dependencies = {
       'neovim/nvim-lspconfig',
       'mfussenegger/nvim-dap',
-      'mfussenegger/nvim-dap-python', --optional
+      'mfussenegger/nvim-dap-python', -- Disabled globally; retained for future DAP integration.
     },
     ft = 'python',
     opts = {
