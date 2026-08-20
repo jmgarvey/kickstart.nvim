@@ -76,6 +76,7 @@ return {
       },
       {
         'mfussenegger/nvim-dap-python',
+        enabled = false,
         lazy = true,
         config = function()
           -- debugpy is installed in my standard Python virtualenv so that it's
