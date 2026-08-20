@@ -8,7 +8,6 @@ return {
         function()
           require('grug-far').open {
             transient = true,
-            instanceName = 'replace',
             staticTitle = 'Grug Find and Replace',
           }
         end,
@@ -19,7 +18,6 @@ return {
         function()
           require('grug-far').open {
             transient = true,
-            instanceName = 'replace',
             staticTitle = 'Grug Find and Replace',
             prefills = { search = vim.fn.expand '<cword>' },
           }
@@ -31,7 +29,6 @@ return {
         function()
           require('grug-far').open {
             transient = true,
-            instanceName = 'replace',
             staticTitle = 'Grug Find and Replace',
             prefills = { paths = vim.fn.expand '%' },
           }
