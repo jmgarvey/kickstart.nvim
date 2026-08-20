@@ -76,6 +76,17 @@ Use which-key or `<leader>sk` to discover mappings. Main entry points include:
 DAP UI and virtual text are installed, but no debugger adapter is currently
 configured. Python DAP support is retained in the configuration but disabled.
 
+## Sessions
+
+MiniSessions owns one ignored `Session.vim` per working directory. Create the
+current directory's session with `:lua MiniSessions.write('Session.vim')` and
+restore it with `s` on the Snacks dashboard. Once restored, it is updated on
+exit.
+
+Worktree switches save the source session and restore the destination session,
+creating one when needed. A switch is canceled while a listed buffer has
+unsaved changes. Removing a worktree also removes its local session file.
+
 ## Maintenance
 
 - `:Lazy`: inspect plugins

@@ -21,7 +21,12 @@ return {
         return '%2l:%-2v'
       end
 
-      require('mini.sessions').setup()
+      require('mini.sessions').setup {
+        autoread = false,
+        autowrite = true,
+        directory = '',
+        file = 'Session.vim',
+      }
     end,
   },
 }
