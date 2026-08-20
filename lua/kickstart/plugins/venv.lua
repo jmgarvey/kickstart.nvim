@@ -13,9 +13,6 @@ return {
         picker = 'snacks',
       },
     },
-    --config = function()
-    --  require('venv-selector').setup()
-    --end,
     keys = {
       { ',v', '<cmd>VenvSelect<cr>', desc = 'Virtual Environments' },
     },
